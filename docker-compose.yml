@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+
+         db:
+                 image: postgres
+                 restart: always
+                 shm_size: 128mb
+                 ports:
+                         - 5432:5432
+                 environment:
+                         POSTGRES_PASSWORD: Zmzvsig98
+                 volumes:
+                         - postgre_volume:/data/postgres
+
+         adminer:
+                 image: adminer
+                 restart: always
+                 ports:
+                         - 8080:8080
+         pgadmin:
+                 image: dpage/pgadmin4:latest
+                 restart: always
+                 environment:
+                        PGADMIN_DEFAULT_EMAIL: yuyutarasenko@gmail.com
+                        PGADMIN_DEFAULT_PASSWORD: Zmzvsig98
+                        PGADMIN_LISTEN_PORT: 80
+                 ports:
+                          - 8081:80
+volumes:
+  postgre_volume:
