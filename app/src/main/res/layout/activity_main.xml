@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddadaf"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="расписание"
+        android:textSize="42sp"
+        android:textColor="#7a4949"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Spinner
+        android:radius="145dp"
+        android:id="@+id/spinner"
+        android:layout_width="144dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/spinner_background"
+        android:textColor="#b3d7d7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:radius="16dp"
+        android:id="@+id/spinner2"
+        android:layout_width="136dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#b3d7d7"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_schedule"
+            android:layout_width="213dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_background"
+            android:onClick="showSchedule"
+            android:text="Показать расписание"
+
+            android:textColor="#7a4949"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.144" />
+
+        <TextView
+            android:id="@+id/text_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Здесь будет отображаться расписание"
+            android:textColor="#7a4949"
+            app:layout_constraintTop_toBottomOf="@id/button_schedule"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
