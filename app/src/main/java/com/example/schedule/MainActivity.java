@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call call, IOException e) {
                 view.post(new Runnable() {
                     public void run() {
-                        view.append(e.getMessage());
+                        view.setText("Ошибка при загрузке данных");
                     }
                 });
             }
@@ -137,7 +137,8 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call call, IOException e) {
                 view.post(new Runnable() {
                     public void run() {
-                        view.append(e.getMessage());
+                        view.setText("Ошибка при загрузке данных");
+
                     }
                 });
             }
