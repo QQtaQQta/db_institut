@@ -23,19 +23,6 @@
         />
 
     <Spinner
-        android:radius="145dp"
-        android:id="@+id/spinner"
-        android:layout_width="144dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/spinner_background"
-        android:textColor="#b3d7d7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.208"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
         android:radius="16dp"
         android:id="@+id/spinner2"
         android:layout_width="136dp"
@@ -50,7 +37,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-48dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:id="@+id/button_schedule"
@@ -65,7 +54,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.144" />
+            app:layout_constraintVertical_bias="0.084" />
 
         <TextView
             android:id="@+id/text_schedule"
@@ -73,9 +62,19 @@
             android:layout_height="wrap_content"
             android:text="Здесь будет отображаться расписание"
             android:textColor="#7a4949"
-            app:layout_constraintTop_toBottomOf="@id/button_schedule"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/button_schedule" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="144dp"
+            android:layout_height="46dp"
+            android:background="@drawable/spinner_background"
+            android:radius="145dp"
+            android:textColor="#b3d7d7"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="5dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
